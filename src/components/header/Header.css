@@ -1,6 +1,5 @@
 /* Header.css */
 
-/* Common styles for both desktop and mobile */
 header {
   background-color: #333;
   color: #fff;
@@ -11,12 +10,31 @@ header {
   height: 50px; /* Adjust as needed */
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links {
+  display: flex;
+}
+
+.nav-links ul {
   list-style: none;
+  padding: 1;
+  margin: 0;
+  display: flex;
 }
 
 .nav-links li {
   margin-right: 1rem;
+  margin: 1rem;
 }
 
 .nav-links li a {
@@ -28,19 +46,62 @@ header {
   text-decoration: underline;
 }
 
-/* Responsive styles for mobile */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.dropdown {
+  display: none;
+}
+
+.dropdown button {
+  display: block;
+  margin-bottom: 0.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 @media (max-width: 768px) {
-  /* Adjustments for smaller screens */
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+  .hamburger {
+    display: block;
   }
 
   .nav-links {
-    margin-top: 1rem;
+    display: none;
   }
 
-  .nav-links li {
-    margin: 0.5rem 0;
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: #333;
+    padding: 1rem;
   }
 }
