@@ -1,12 +1,14 @@
-
-import './App.css';
-
-function App() {
+import React from "react";
+import Card from "./components/card/Card";
+import Header from "./components/header/Header";
+const App = () => {
   return (
-    <div className="App">
-      <h1>This is LearnCard</h1>
-    </div>
+
+    < div >
+      <Header />
+      <Card title="Card Title" content="This is the content of the card." />
+    </div >
   );
-}
+};
 
 export default App;

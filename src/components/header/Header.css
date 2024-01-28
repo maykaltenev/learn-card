@@ -1,0 +1,46 @@
+/* Header.css */
+
+/* Common styles for both desktop and mobile */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.logo img {
+  height: 50px; /* Adjust as needed */
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 1rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
