@@ -2,21 +2,43 @@ import React, { useState } from "react";
 import "./Card.css"; // CSS file for styling
 
 const Card = () => {
-  const [text, setText] = useState("");
+  const [englishText, setEnglishText] = useState("");
+  const [norwegianText, setNorwegianText] = useState("");
 
-  const handleChange = (e) => {
-    setText(e.target.value);
+  const handleEnglishChange = (e) => {
+    setEnglishText(e.target.value);
+  };
+
+  const handleNorwegianChange = (e) => {
+    setNorwegianText(e.target.value);
   };
 
   const handleClick = () => {
-    alert(text);
+    alert(`English: ${englishText}\nNorwegian: ${norwegianText}`);
   };
 
   return (
     <div className="card-container">
       <div className="card">
-        <textarea placeholder="New word" value={text} onChange={handleChange} />
-        <button onClick={handleClick}>Add</button>
+        <div className="input-container">
+          <input
+            type="text"
+            placeholder="English word"
+            value={englishText}
+            onChange={handleEnglishChange}
+          />
+        </div>
+        <div className="input-container">
+          <input
+            type="text"
+            placeholder="Norwegian word"
+            value={norwegianText}
+            onChange={handleNorwegianChange}
+          />
+        </div>
+        <div className="button-container">
+          <button onClick={handleClick}>Add</button>
+        </div>
       </div>
     </div>
   );
