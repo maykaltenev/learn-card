@@ -1,6 +1,8 @@
 // Header.jsx
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Header.css";
 
 const Header = () => {
@@ -20,13 +22,13 @@ const Header = () => {
           <div className="nav-links">
             <ul>
               <li>
-                <a href="#">Add Word</a>
+                <Link to="/card">Card</Link>
               </li>
               <li>
-                <a href="#">Random</a>
+                <Link to="/random">Random</Link>
               </li>
               <li>
-                <a href="#">All</a>
+                <Link to="/word-list">Word List</Link>
               </li>
             </ul>
           </div>
@@ -37,9 +39,9 @@ const Header = () => {
           </div>
           {showMenu && (
             <div className="dropdown">
-              <button>Add Word</button>
-              <button>Random</button>
-              <button>All</button>
+              <Link to="/card">Card</Link>
+              <Link to="/random">Random</Link>
+              <Link to="/word-list">Word List</Link>
             </div>
           )}
         </div>
