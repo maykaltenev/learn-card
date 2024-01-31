@@ -1,31 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDictionary } from "../../context/DictionaryContext.js"; // Import the useDictionary hook
 import "./Card.css"; // CSS file for styling
 
 const Card = () => {
-  const [englishText, setEnglishText] = useState("");
-  const [norwegianText, setNorwegianText] = useState("");
-  const [wordList, setWordList] = useState([]);
+  const { currentWord, setCurrentWord, addWord } = useDictionary(); // Access currentWord and setCurrentWord from context
 
   const handleEnglishChange = (e) => {
-    setEnglishText(e.target.value);
+    setCurrentWord({ ...currentWord, english: e.target.value });
   };
 
   const handleNorwegianChange = (e) => {
-    setNorwegianText(e.target.value);
+    setCurrentWord({ ...currentWord, norwegian: e.target.value });
   };
 
   const handleClick = () => {
-    if (englishText.trim() !== "" && norwegianText.trim() !== "") {
-      const newWord = {
-        english: englishText,
-        norwegian: norwegianText,
-      };
-      setWordList([...wordList, newWord]);
-      setEnglishText(""); // Clear the input fields after adding
-      setNorwegianText("");
-    } else {
-      alert("Please enter both English and Norwegian words.");
-    }
+    addWord();
   };
 
   return (
@@ -35,7 +24,7 @@ const Card = () => {
           <input
             type="text"
             placeholder="English word"
-            value={englishText}
+            value={currentWord.english}
             onChange={handleEnglishChange}
           />
         </div>
@@ -43,24 +32,13 @@ const Card = () => {
           <input
             type="text"
             placeholder="Norwegian word"
-            value={norwegianText}
+            value={currentWord.norwegian}
             onChange={handleNorwegianChange}
           />
         </div>
         <div className="button-container">
           <button onClick={handleClick}>Add</button>
         </div>
-      </div>
-      <div>
-        <h2>Word List</h2>
-        <ul>
-          {wordList.map((word, index) => (
-            <li key={index}>
-              <strong>English:</strong> {word.english},{" "}
-              <strong>Norwegian:</strong> {word.norwegian}
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   );

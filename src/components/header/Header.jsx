@@ -28,7 +28,7 @@ const Header = () => {
                 <Link to="/random">Random</Link>
               </li>
               <li>
-                <Link to="/word-list">Word List</Link>
+                <Link to="/dictionary">Dictionary</Link>
               </li>
             </ul>
           </div>
@@ -41,7 +41,7 @@ const Header = () => {
             <div className="dropdown">
               <Link to="/card">Card</Link>
               <Link to="/random">Random</Link>
-              <Link to="/word-list">Word List</Link>
+              <Link to="/dictionary">Dictionary</Link>
             </div>
           )}
         </div>
