@@ -2,15 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
+  max-width: 400px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .card {
-  width: 300px;
+  width: 200px;
   padding: 20px;
-  border: 2px solid #ccc;
+  border: 2px solid #332e2e17;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: #ececf086;
 }
 
 .input-container {
@@ -21,7 +23,7 @@
   width: calc(100% - 20px); /* Subtract padding from width */
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #c695d4;
   border-radius: 5px;
   font-size: 16px;
 }
@@ -30,10 +32,9 @@
   text-align: center;
 }
 
-button {
+.button-container button {
   padding: 10px 20px;
-  background-color: #6d00d9;
-  color: #fff;
+  color: #1f1320;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -42,5 +43,5 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #47bf40;
 }

@@ -1,10 +1,16 @@
 .dictionary-container {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  /* Add padding to provide space on the sides */
 }
 
 .word-list {
   margin-top: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
 }
 
 .word-list table {
@@ -24,8 +30,9 @@
 }
 
 .card-container {
-  max-width: 400px;
+  max-width: 100%; /* Take full width on small screens */
   margin: 20px auto;
+  padding: 0 20px; /* Add padding to provide space on the sides */
 }
 
 .card {
@@ -58,4 +65,11 @@
 
 .button-container button:hover {
   background-color: #45a049;
+}
+
+/* Media Query for screens smaller than 600px */
+@media (max-width: 600px) {
+  .dictionary-container {
+    max-width: 100%; /* Take full width on small screens */
+  }
 }

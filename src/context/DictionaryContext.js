@@ -19,7 +19,7 @@ export const DictionaryProvider = ({ children }) => {
       currentWord.norwegian.trim() !== ""
     ) {
       setWordList([...wordList, currentWord]);
-      setCurrentWord({ english: "", norwegian: "" }); // Clear the current word after adding
+      setCurrentWord({ english: "", norwegian: "" });
     } else {
       alert("Please enter both English and Norwegian words.");
     }

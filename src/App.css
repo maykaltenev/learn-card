@@ -1,0 +1,12 @@
+/* Tables styling */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #7b90a8e0; /* light gray mint color */
+}

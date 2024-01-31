@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Card from "./components/card/Card";
 import Header from "./components/header/Header";
 import Dictionary from "./components/dictionary/Dictionary";
+import "./App.css";
 const App = () => {
   return (
     <BrowserRouter>
