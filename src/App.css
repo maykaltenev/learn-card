@@ -8,5 +8,8 @@ table {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #7b90a8e0; /* light gray mint color */
+  background-color: #7b90a8e0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* light gray mint color */
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDictionary } from "../../context/DictionaryContext.js"; // Import the useDictionary hook
 import "./Dictionary.css"; // CSS file for styling
-import Card from "../card/Card.jsx"; // Importing the Card component
+import Card from "../form/Form.jsx"; // Importing the Card component
 
 const Dictionary = () => {
   const { wordList } = useDictionary(); // Access wordList from context

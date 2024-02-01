@@ -22,7 +22,7 @@ const Header = () => {
           <div className="nav-links">
             <ul>
               <li>
-                <Link to="/card">Card</Link>
+                <Link to="/add">Add</Link>
               </li>
               <li>
                 <Link to="/random">Random</Link>
@@ -39,7 +39,7 @@ const Header = () => {
           </div>
           {showMenu && (
             <div className="dropdown">
-              <Link to="/card">Card</Link>
+              <Link to="/add">Add</Link>
               <Link to="/random">Random</Link>
               <Link to="/dictionary">Dictionary</Link>
             </div>

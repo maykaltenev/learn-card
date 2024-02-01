@@ -1,8 +1,8 @@
 import React from "react";
 import { useDictionary } from "../../context/DictionaryContext.js"; // Import the useDictionary hook
-import "./Card.css"; // CSS file for styling
+import "./Form.css"; // CSS file for styling
 
-const Card = () => {
+const Form = () => {
   const { currentWord, setCurrentWord, addWord } = useDictionary(); // Access currentWord and setCurrentWord from context
 
   const handleEnglishChange = (e) => {
@@ -13,13 +13,14 @@ const Card = () => {
     setCurrentWord({ ...currentWord, norwegian: e.target.value });
   };
 
-  const handleClick = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
     addWord();
   };
 
   return (
-    <div className="card-container">
-      <div className="card">
+    <div className="form-container">
+      <form onSubmit={handleSubmit} className="form">
         <div className="input-container">
           <input
             type="text"
@@ -37,11 +38,11 @@ const Card = () => {
           />
         </div>
         <div className="button-container">
-          <button onClick={handleClick}>Add</button>
+          <button type="submit">Add</button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
 
-export default Card;
+export default Form;
